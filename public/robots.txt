@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://convertmint.com/sitemap.xml
