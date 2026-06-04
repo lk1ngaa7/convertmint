@@ -4,6 +4,11 @@ const routes = [
   '/convert-kg-to-lbs',
   '/convert-lbs-to-kg',
   '/weight-converter',
+  '/about',
+  '/contact',
+  '/privacy',
+  '/terms',
+  '/sitemap',
 ]
 
 export default defineNuxtConfig({

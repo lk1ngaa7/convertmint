@@ -2,109 +2,50 @@ import type { FaqItem } from '~/components/seo/FaqBlock.vue'
 
 export const faqs: Record<string, FaqItem[]> = {
   home: [
-    {
-      question: 'What can I convert on Convert Mint?',
-      answer: 'The MVP includes kilograms to pounds, pounds to kilograms, a weight converter, and a military time converter.',
-    },
-    {
-      question: 'Do I need to sign up?',
-      answer: 'No. The tools work directly in your browser without an account.',
-    },
-    {
-      question: 'Are the converters free?',
-      answer: 'Yes. Convert Mint MVP tools are free to use.',
-    },
-    {
-      question: 'Can I use these tools on mobile?',
-      answer: 'Yes. The pages are designed to work on mobile, tablet, and desktop screens.',
-    },
+    { question: 'Are these converter tools free?', answer: 'Yes. ConvertMintTools is free to use for the converter tools available now.' },
+    { question: 'Do I need to create an account?', answer: 'No. The tools work in your browser without sign-up or a user account.' },
+    { question: 'Are the calculations done in my browser?', answer: 'Yes. The converters are browser-based and do not need a backend calculation API.' },
+    { question: 'How accurate are the conversion results?', answer: 'The tools use standard conversion factors and round display values for readability. High-risk uses should always be checked independently.' },
+    { question: 'Which converters are available now?', answer: 'The current tools cover kg to lbs, lbs to kg, multi-unit weight conversion, and military time conversion.' },
   ],
   kgToLbs: [
-    {
-      question: 'How do you convert kg to lbs?',
-      answer: 'Multiply the kilogram value by 2.20462. For example, 80 kg × 2.20462 = 176.37 lbs.',
-    },
-    {
-      question: 'What is 1 kg in pounds?',
-      answer: '1 kg is equal to about 2.2 lbs when rounded to two decimal places.',
-    },
-    {
-      question: 'What is the kg to lbs formula?',
-      answer: 'The formula is pounds = kilograms × 2.20462.',
-    },
-    {
-      question: 'Is 1 kg equal to 2.2 lbs?',
-      answer: 'Yes, 1 kg is commonly rounded to 2.2 lbs. The more precise factor is 2.2046226218.',
-    },
-    {
-      question: 'How many pounds is 80 kg?',
-      answer: '80 kg is equal to 176.37 lbs.',
-    },
+    { question: 'How do you convert kg to lbs?', answer: 'Multiply the kilogram value by 2.2046226218. For example, 80 kg equals 176.37 lb.' },
+    { question: 'What is 1 kg in pounds?', answer: '1 kg is equal to 2.2046226218 lb, usually shown as 2.2 lb or 2.20 lb.' },
+    { question: 'Is 1 kg exactly 2.2 lbs?', answer: 'No. 2.2 is a useful quick estimate, but the exact conversion factor is 2.2046226218.' },
+    { question: 'How many pounds is 80 kg?', answer: '80 kg is equal to 176.37 lb when rounded to two decimals.' },
+    { question: 'Why do some people use kg and others use lbs?', answer: 'Kilograms are part of the metric system and are common in most countries. Pounds are commonly used in the United States.' },
+    { question: 'Can I use this converter for body weight?', answer: 'Yes. It can convert body weight values without making health or fitness judgments.' },
+    { question: 'Can I use this converter for package weight?', answer: 'Yes. It is useful for package, shipping, and product weight conversions.' },
+    { question: 'How accurate is this kg to lbs converter?', answer: 'It uses the standard kilogram to pound factor and rounds visible results to keep them easy to read.' },
   ],
   lbsToKg: [
-    {
-      question: 'How do you convert lbs to kg?',
-      answer: 'Divide the pound value by 2.20462. For example, 150 lbs ÷ 2.20462 = 68.04 kg.',
-    },
-    {
-      question: 'What is 1 lb in kilograms?',
-      answer: '1 lb is equal to about 0.45 kg when rounded to two decimal places.',
-    },
-    {
-      question: 'What is the lbs to kg formula?',
-      answer: 'The formula is kilograms = pounds ÷ 2.20462.',
-    },
-    {
-      question: 'How many kilograms is 150 lbs?',
-      answer: '150 lbs is equal to 68.04 kg.',
-    },
-    {
-      question: 'Can I convert decimal pounds?',
-      answer: 'Yes. Enter a decimal value such as 12.5 lbs and the converter will calculate the kilogram result.',
-    },
+    { question: 'How do you convert lbs to kg?', answer: 'Divide the pound value by 2.2046226218. For example, 180 lb equals 81.65 kg.' },
+    { question: 'What is 1 lb in kg?', answer: '1 lb is equal to 0.453592 kg when rounded to six decimals.' },
+    { question: 'How many kilograms is 180 lbs?', answer: '180 lb is equal to 81.65 kg when rounded to two decimals.' },
+    { question: 'Is pounds to kilograms the same as lbs to kg?', answer: 'Yes. Lbs is the common abbreviation for pounds, so both phrases describe the same conversion.' },
+    { question: 'Can I use this for luggage weight?', answer: 'Yes. It is useful when checking airline luggage limits listed in kilograms.' },
+    { question: 'Can I use this for gym weights?', answer: 'Yes. It can convert dumbbells, plates, and body weight values between pounds and kilograms.' },
+    { question: 'How accurate is this lbs to kg converter?', answer: 'It uses the standard pound to kilogram relationship and rounds visible results for readability.' },
+    { question: 'What is the difference between pounds and kilograms?', answer: 'Pounds are common in the US customary system. Kilograms are the base metric unit for mass.' },
   ],
   weightConverter: [
-    {
-      question: 'What does this weight converter support?',
-      answer: 'The MVP supports kilograms to pounds and pounds to kilograms.',
-    },
-    {
-      question: 'What is the kg to lbs conversion factor?',
-      answer: 'The conversion factor is 2.2046226218 pounds per kilogram.',
-    },
-    {
-      question: 'What is the lbs to kg conversion factor?',
-      answer: 'To convert pounds to kilograms, divide by 2.2046226218.',
-    },
-    {
-      question: 'Can I use decimals?',
-      answer: 'Yes. Decimal values are supported for both kilograms and pounds.',
-    },
-    {
-      question: 'Does the converter support negative weights?',
-      answer: 'No. Negative values are rejected in this converter because MVP weight conversions are intended for ordinary non-negative values.',
-    },
+    { question: 'What units does this weight converter support?', answer: 'It supports kg, g, mg, lb, oz, stone, metric ton, and US ton.' },
+    { question: 'How do you convert kg to lbs?', answer: 'Multiply kilograms by 2.2046226218 to get pounds.' },
+    { question: 'How do you convert lbs to kg?', answer: 'Divide pounds by 2.2046226218 to get kilograms.' },
+    { question: 'How many ounces are in a pound?', answer: 'There are 16 ounces in 1 pound.' },
+    { question: 'How many pounds are in a stone?', answer: 'There are 14 pounds in 1 stone.' },
+    { question: 'What is the difference between a metric ton and a US ton?', answer: 'A metric ton is 1000 kg. A US ton is 2000 lb.' },
+    { question: 'Can I use this converter for body weight?', answer: 'Yes. It can convert body weight values between supported units.' },
+    { question: 'How accurate are the results?', answer: 'The converter uses standard unit factors and rounds the displayed result to a practical length.' },
   ],
   militaryTime: [
-    {
-      question: 'What is military time?',
-      answer: 'Military time is a 24-hour time format that runs from 0000 at midnight to 2359 one minute before midnight.',
-    },
-    {
-      question: 'How do you convert military time to regular time?',
-      answer: 'For times from 1300 to 2359, subtract 12 from the hour and use PM. For 0000, use 12:00 AM.',
-    },
-    {
-      question: 'What is 1430 in regular time?',
-      answer: '1430 is 2:30 PM in regular 12-hour time.',
-    },
-    {
-      question: 'Is 0000 midnight?',
-      answer: 'Yes. 0000 is midnight, which is 12:00 AM in regular time.',
-    },
-    {
-      question: 'Is 1200 AM or PM in military time?',
-      answer: '1200 is 12:00 PM, noon. Midnight is 0000.',
-    },
+    { question: 'What is military time?', answer: 'Military time is a 24-hour time format that runs from 0000 at midnight to 2359 before the next midnight.' },
+    { question: 'How do you convert military time to regular time?', answer: 'For 1300 through 2359, subtract 12 from the hour and use PM. 0000 is 12:00 AM and 1200 is 12:00 PM.' },
+    { question: 'How do you convert regular time to military time?', answer: 'For PM times after noon, add 12 to the hour. For 12:00 AM, use 0000.' },
+    { question: 'What is 0000 in regular time?', answer: '0000 is 12:00 AM, or midnight.' },
+    { question: 'What is 1200 in military time?', answer: '1200 is noon, which is 12:00 PM in regular time.' },
+    { question: 'Is 2400 a valid military time?', answer: 'No. This converter treats valid military time as 0000 through 2359.' },
+    { question: 'Is military time the same as 24-hour time?', answer: 'They are closely related. Military time usually writes the 24-hour time without a colon, such as 1430.' },
+    { question: 'How do you say 0730 in military time?', answer: '0730 is commonly read as zero seven thirty and means 7:30 AM.' },
   ],
 }

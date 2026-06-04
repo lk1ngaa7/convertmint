@@ -4,14 +4,15 @@
       {{ title }}
     </h2>
     <div class="divide-y divide-gray-200 rounded-lg border border-gray-200 bg-white">
-      <article v-for="item in items" :key="item.question" class="p-5">
-        <h3 class="text-base font-semibold text-gray-950">
-          {{ item.question }}
-        </h3>
+      <details v-for="item in items" :key="item.question" class="group p-5 sm:block" :open="!isMobileDefaultCollapsed">
+        <summary class="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold text-gray-950">
+          <span>{{ item.question }}</span>
+          <span class="text-lg text-gray-400 group-open:rotate-45" aria-hidden="true">+</span>
+        </summary>
         <p class="mt-2 text-sm leading-6 text-gray-600">
           {{ item.answer }}
         </p>
-      </article>
+      </details>
     </div>
   </section>
 </template>
@@ -27,10 +28,12 @@ withDefaults(
     title?: string
     headingId?: string
     items: FaqItem[]
+    isMobileDefaultCollapsed?: boolean
   }>(),
   {
     title: 'Frequently asked questions',
     headingId: 'faq',
+    isMobileDefaultCollapsed: true,
   },
 )
 </script>

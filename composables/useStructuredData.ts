@@ -52,6 +52,36 @@ export function useWebApplicationJsonLd(pageKey: PageKey): void {
   })
 }
 
+export interface BreadcrumbItem {
+  name: string
+  path: string
+}
+
+export function useBreadcrumbJsonLd(items: BreadcrumbItem[]): void {
+  addJsonLd({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: `${siteUrl}${item.path}`,
+    })),
+  })
+}
+
+export function useCollectionPageJsonLd(pageKey: PageKey): void {
+  const page = pages[pageKey]
+
+  addJsonLd({
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: page.h1,
+    url: `${siteUrl}${page.path}`,
+    description: page.description,
+  })
+}
+
 export function useHomeJsonLd(): void {
   addJsonLd([
     {
@@ -60,6 +90,12 @@ export function useHomeJsonLd(): void {
       name: 'Convert Mint',
       url: siteUrl,
       description: pages.home.description,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'ConvertMintTools',
+      url: siteUrl,
     },
     {
       '@context': 'https://schema.org',

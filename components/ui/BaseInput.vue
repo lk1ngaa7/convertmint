@@ -12,7 +12,7 @@
       :autocomplete="autocomplete"
       :aria-describedby="error ? errorId : hint ? hintId : undefined"
       :aria-invalid="error ? 'true' : 'false'"
-      class="min-h-11 w-full rounded-[10px] border border-gray-300 bg-white px-3 py-2 text-base text-gray-950 outline-none transition placeholder:text-gray-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
+      class="min-h-12 w-full rounded-[10px] border border-gray-300 bg-white px-3 py-2 text-base text-gray-950 outline-none transition placeholder:text-gray-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
       @input="handleInput"
     >
     <p v-if="hint && !error" :id="hintId" class="text-sm text-gray-500">

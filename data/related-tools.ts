@@ -46,17 +46,22 @@ export const relatedTools: Record<string, RelatedTool[]> = {
       description: 'Convert pounds back to kilograms instantly.',
       href: '/convert-lbs-to-kg',
     },
+    {
+      title: 'Military Time Converter',
+      description: 'Convert military time and regular time in either direction.',
+      href: '/military-time-converter',
+    },
   ],
   militaryTime: [
-    {
-      title: 'Free Unit Converter',
-      description: 'Browse Convert Mint tools for weight and time conversions.',
-      href: '/',
-    },
     {
       title: 'Convert kg to lbs',
       description: 'Convert kilograms to pounds instantly.',
       href: '/convert-kg-to-lbs',
+    },
+    {
+      title: 'Convert lbs to kg',
+      description: 'Convert pounds back to kilograms instantly.',
+      href: '/convert-lbs-to-kg',
     },
     {
       title: 'Weight Converter',

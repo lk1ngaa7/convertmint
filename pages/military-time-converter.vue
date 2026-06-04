@@ -1,5 +1,6 @@
 <template>
   <main class="mx-auto max-w-6xl space-y-8 px-4 py-6 sm:space-y-10 sm:px-6 sm:py-10 lg:px-8">
+    <Breadcrumbs :items="breadcrumbs" />
     <section class="space-y-5">
       <div class="max-w-3xl space-y-3">
         <p class="text-sm font-semibold text-blue-700">{{ page.trustNote }}</p>
@@ -51,8 +52,14 @@ import { pages } from '~/data/pages'
 import { relatedTools } from '~/data/related-tools'
 
 const page = pages.militaryTime
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Time Converters', path: '/military-time-converter' },
+  { name: 'Military Time Converter', path: '/military-time-converter' },
+]
 
 usePageSeo('militaryTime')
 useWebApplicationJsonLd('militaryTime')
 useFaqJsonLd(faqs.militaryTime)
+useBreadcrumbJsonLd(breadcrumbs)
 </script>

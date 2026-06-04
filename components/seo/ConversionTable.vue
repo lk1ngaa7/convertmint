@@ -8,7 +8,17 @@
         {{ description }}
       </p>
     </div>
-    <div class="overflow-x-auto rounded-lg border border-gray-200 bg-white">
+    <div class="grid gap-3 sm:hidden">
+      <article v-for="row in rows" :key="row.join('-')" class="rounded-lg border border-gray-200 bg-white p-4">
+        <dl class="grid grid-cols-2 gap-3 text-sm">
+          <div v-for="(cell, index) in row" :key="`${headers[index]}-${cell}`">
+            <dt class="font-semibold text-gray-500">{{ headers[index] }}</dt>
+            <dd class="mt-1 text-base font-semibold text-gray-950">{{ cell }}</dd>
+          </div>
+        </dl>
+      </article>
+    </div>
+    <div class="hidden rounded-lg border border-gray-200 bg-white sm:block">
       <table class="min-w-full divide-y divide-gray-200 text-left text-sm">
         <thead class="bg-gray-50 text-gray-700">
           <tr>

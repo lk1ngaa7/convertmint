@@ -8,7 +8,7 @@
         Error: {{ error }}
       </p>
       <template v-else-if="value">
-        <p class="text-3xl font-bold tracking-normal text-gray-950">
+        <p class="text-[32px] font-bold leading-tight tracking-normal text-gray-950">
           {{ value }}
         </p>
         <p v-if="description" class="text-sm leading-6 text-gray-600">

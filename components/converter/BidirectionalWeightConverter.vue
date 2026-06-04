@@ -32,7 +32,7 @@
           Error: {{ error }}
         </p>
         <template v-else-if="resultValue">
-          <p class="mt-1 text-2xl font-bold tracking-normal text-gray-950">
+          <p class="mt-1 text-[32px] font-bold leading-tight tracking-normal text-gray-950">
             {{ resultValue }}
           </p>
           <div class="mt-3">

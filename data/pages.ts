@@ -1,4 +1,14 @@
-export type PageKey = 'home' | 'kgToLbs' | 'lbsToKg' | 'militaryTime' | 'weightConverter'
+export type PageKey =
+  | 'home'
+  | 'kgToLbs'
+  | 'lbsToKg'
+  | 'militaryTime'
+  | 'weightConverter'
+  | 'about'
+  | 'contact'
+  | 'privacy'
+  | 'terms'
+  | 'sitemap'
 
 export interface PageMeta {
   path: string
@@ -53,7 +63,7 @@ export const pages: Record<PageKey, PageMeta> = {
     title: 'Military Time Converter - Convert Military Time to Regular Time',
     description: 'Convert military time to regular 12-hour time instantly. Enter values like 1430 or 23:45 and see the AM/PM result with examples and a military time chart.',
     h1: 'Military Time Converter',
-    subtitle: 'Convert military time like 1430 or 23:45 to regular 12-hour time instantly.',
+    subtitle: 'Convert military time to regular time and regular time to military time instantly.',
     trustNote: 'Fast conversion · Clear examples · No sign-up',
     ogTitle: 'Military Time Converter - Convert Military Time to Regular Time',
     ogDescription: 'Convert military time like 1430 or 23:45 to regular AM/PM time.',
@@ -64,10 +74,65 @@ export const pages: Record<PageKey, PageMeta> = {
     title: 'Weight Converter - Convert kg, lbs, Pounds and Kilograms',
     description: 'Use a simple weight converter to convert kilograms to pounds, pounds to kilograms, and common weight units with formulas and conversion examples.',
     h1: 'Weight Converter',
-    subtitle: 'Convert kilograms, pounds, and common weight units with simple formulas and examples.',
+    subtitle: 'Convert between kilograms, grams, milligrams, pounds, ounces, stone, and tons.',
     trustNote: 'Fast weight conversion · Clear formulas · No sign-up',
     ogTitle: 'Weight Converter - Convert kg, lbs, Pounds and Kilograms',
     ogDescription: 'Convert kilograms and pounds with simple formulas and examples.',
+    type: 'article',
+  },
+  about: {
+    path: '/about',
+    title: 'About ConvertMintTools',
+    description: 'Learn about ConvertMintTools, a collection of free browser-based converter tools for weight and time conversions.',
+    h1: 'About ConvertMintTools',
+    subtitle: 'Simple browser-based converter tools with clear formulas and fast results.',
+    trustNote: 'Free tools · Standard conversion factors · No sign-up',
+    ogTitle: 'About ConvertMintTools',
+    ogDescription: 'Learn about ConvertMintTools and its browser-based converter tools.',
+    type: 'article',
+  },
+  contact: {
+    path: '/contact',
+    title: 'Contact ConvertMintTools',
+    description: 'Contact ConvertMintTools to report an issue, suggest a converter, or share feedback about the tools.',
+    h1: 'Contact ConvertMintTools',
+    subtitle: 'Send feedback, report conversion issues, or suggest a new converter tool.',
+    trustNote: 'Feedback welcome · No backend form · Email contact',
+    ogTitle: 'Contact ConvertMintTools',
+    ogDescription: 'Contact ConvertMintTools with feedback or converter suggestions.',
+    type: 'article',
+  },
+  privacy: {
+    path: '/privacy',
+    title: 'Privacy Policy',
+    description: 'Read the ConvertMintTools privacy policy for browser-based converter tools, cookies, analytics, and Cloudflare processing.',
+    h1: 'Privacy Policy',
+    subtitle: 'How ConvertMintTools handles privacy for simple browser-based converter tools.',
+    trustNote: 'Last updated: June 4, 2026',
+    ogTitle: 'Privacy Policy',
+    ogDescription: 'Read the privacy policy for ConvertMintTools.',
+    type: 'article',
+  },
+  terms: {
+    path: '/terms',
+    title: 'Terms of Service',
+    description: 'Read the ConvertMintTools terms of service for using free browser-based converter tools.',
+    h1: 'Terms of Service',
+    subtitle: 'Terms for using ConvertMintTools converter pages and information.',
+    trustNote: 'Last updated: June 4, 2026',
+    ogTitle: 'Terms of Service',
+    ogDescription: 'Read the terms of service for ConvertMintTools.',
+    type: 'article',
+  },
+  sitemap: {
+    path: '/sitemap',
+    title: 'Sitemap',
+    description: 'Browse all main ConvertMintTools pages, weight converters, and time converter tools.',
+    h1: 'Sitemap',
+    subtitle: 'Find all available ConvertMintTools pages and converter tools.',
+    trustNote: 'Main pages · Weight converters · Time converters',
+    ogTitle: 'Sitemap',
+    ogDescription: 'Browse all ConvertMintTools pages.',
     type: 'article',
   },
 }
