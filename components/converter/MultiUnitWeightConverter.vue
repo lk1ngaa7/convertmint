@@ -1,5 +1,5 @@
 <template>
-  <div class="grid gap-5 lg:grid-cols-[minmax(0,1.05fr)_minmax(280px,0.95fr)]">
+  <div class="grid min-w-0 gap-5 lg:grid-cols-[minmax(0,1.05fr)_minmax(280px,0.95fr)]">
     <ConverterCard title="Weight converter" description="Convert between common metric and US weight units.">
       <BaseInput
         id="weight-amount"
@@ -11,7 +11,7 @@
         @update:model-value="amount = $event"
       />
 
-      <div class="grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] sm:items-end">
+      <div class="grid min-w-0 gap-4 sm:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] sm:items-end">
         <label class="grid gap-2 text-sm font-medium text-gray-700">
           <span>From unit</span>
           <select v-model="fromUnit" class="min-h-12 rounded-[10px] border border-gray-300 bg-white px-3 text-base text-gray-950 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600/20">

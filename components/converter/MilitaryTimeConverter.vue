@@ -1,5 +1,5 @@
 <template>
-  <div class="grid gap-5 lg:grid-cols-[minmax(0,1.05fr)_minmax(280px,0.95fr)]">
+  <div class="grid min-w-0 gap-5 lg:grid-cols-[minmax(0,1.05fr)_minmax(280px,0.95fr)]">
     <ConverterCard title="Military time converter" description="Convert in either direction with examples.">
       <div class="grid gap-2 rounded-lg bg-gray-100 p-1 sm:grid-cols-2" role="tablist" aria-label="Military time converter mode">
         <button

@@ -1,25 +1,20 @@
 <template>
   <header class="border-b border-gray-200 bg-white">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+    <div class="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
       <NuxtLink to="/" class="inline-flex min-h-11 items-center whitespace-nowrap text-lg font-semibold text-gray-950">
         ConvertMintTools
       </NuxtLink>
 
-      <nav aria-label="Main navigation" class="hidden items-start gap-8 text-sm font-medium text-gray-600 md:flex">
-        <div v-for="group in navGroups" :key="group.title" class="space-y-2">
-          <p class="text-xs font-semibold uppercase tracking-normal text-gray-500">{{ group.title }}</p>
-          <div class="flex items-center gap-2">
-            <NuxtLink
-              v-for="item in group.items"
-              :key="item.href"
-              :to="item.href"
-              class="inline-flex min-h-11 items-center rounded-lg px-3 hover:bg-gray-50 hover:text-blue-700"
-              active-class="bg-blue-50 text-blue-700"
-            >
-              {{ item.label }}
-            </NuxtLink>
-          </div>
-        </div>
+      <nav aria-label="Main navigation" class="hidden items-center gap-1 text-sm font-medium text-gray-600 md:flex">
+        <NuxtLink
+          v-for="item in desktopNavItems"
+          :key="item.href"
+          :to="item.href"
+          class="inline-flex min-h-11 items-center rounded-lg px-3 hover:bg-gray-50 hover:text-blue-700"
+          active-class="bg-blue-50 text-blue-700"
+        >
+          {{ item.label }}
+        </NuxtLink>
       </nav>
 
       <button
@@ -63,6 +58,13 @@
 
 <script setup lang="ts">
 const isOpen = ref(false)
+
+const desktopNavItems = [
+  { label: 'Weight Converter', href: '/weight-converter' },
+  { label: 'Military Time', href: '/military-time-converter' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+]
 
 const navGroups = [
   {

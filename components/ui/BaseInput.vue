@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-2">
+  <div class="min-w-0 space-y-2">
     <label :for="id" class="block text-sm font-semibold text-gray-900">
       {{ label }}
     </label>

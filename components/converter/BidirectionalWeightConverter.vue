@@ -1,10 +1,10 @@
 <template>
-  <div class="grid gap-5 lg:grid-cols-[minmax(0,1.05fr)_minmax(280px,0.95fr)]">
+  <div class="grid min-w-0 gap-5 lg:grid-cols-[minmax(0,1.05fr)_minmax(280px,0.95fr)]">
     <ConverterCard
       title="Weight converter"
       description="Enter either kilograms or pounds. The other field updates instantly."
     >
-      <div class="grid gap-4 sm:grid-cols-2">
+      <div class="grid min-w-0 gap-4 sm:grid-cols-2">
         <BaseInput
           id="kilograms"
           :model-value="kgInput"
