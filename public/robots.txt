@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://convertmint.com/sitemap.xml
+Sitemap: https://convertminttools.com/sitemap.xml

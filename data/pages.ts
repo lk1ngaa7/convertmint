@@ -12,7 +12,7 @@ export interface PageMeta {
   type: 'website' | 'article'
 }
 
-export const siteUrl = 'https://convertmint.com'
+export const siteUrl = 'https://convertminttools.com'
 
 export const pages: Record<PageKey, PageMeta> = {
   home: {
