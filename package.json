@@ -6,12 +6,13 @@
     "postinstall": "nuxt prepare",
     "dev": "nuxt dev",
     "build": "nuxt build",
-    "generate": "nuxt generate",
+    "generate": "pnpm sitemap:generate && nuxt generate",
     "preview": "nuxt preview",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "nuxt typecheck",
     "og:generate": "node scripts/generate-og.mjs",
+    "sitemap:generate": "node scripts/generate-sitemap.mjs",
     "deploy:cloudflare": "pnpm generate && npx wrangler pages deploy .output/public --project-name convert-mint"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@types/node": "^26.6.6",
     "@vue/test-utils": "^2.4.6",
     "sharp": "^0.35.5",
     "tailwindcss": "^3.4.19",

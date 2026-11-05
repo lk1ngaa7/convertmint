@@ -9,6 +9,36 @@
 - [Weight Converter](https://convertminttools.com/weight-converter/): Multi-unit weight hub (kg, g, mg, lb, oz, stone, metric ton, US ton).
 - [Military Time Converter](https://convertminttools.com/military-time-converter/): Convert HHMM / HH:MM between 24-hour military time and 12-hour AM/PM.
 
+## Specific lbs to kg conversions
+
+- [50 lbs to kg](https://convertminttools.com/50-lbs-to-kg/)
+- [70 lbs to kg](https://convertminttools.com/70-lbs-to-kg/)
+- [100 lbs to kg](https://convertminttools.com/100-lbs-to-kg/)
+- [120 lbs to kg](https://convertminttools.com/120-lbs-to-kg/)
+- [130 lbs to kg](https://convertminttools.com/130-lbs-to-kg/)
+- [150 lbs to kg](https://convertminttools.com/150-lbs-to-kg/)
+- [160 lbs to kg](https://convertminttools.com/160-lbs-to-kg/)
+- [180 lbs to kg](https://convertminttools.com/180-lbs-to-kg/)
+- [200 lbs to kg](https://convertminttools.com/200-lbs-to-kg/)
+- [250 lbs to kg](https://convertminttools.com/250-lbs-to-kg/)
+
+## Specific kg to lbs conversions
+
+- [50 kg to lbs](https://convertminttools.com/50-kg-to-lbs/)
+- [60 kg to lbs](https://convertminttools.com/60-kg-to-lbs/)
+- [70 kg to lbs](https://convertminttools.com/70-kg-to-lbs/)
+- [80 kg to lbs](https://convertminttools.com/80-kg-to-lbs/)
+- [90 kg to lbs](https://convertminttools.com/90-kg-to-lbs/)
+- [100 kg to lbs](https://convertminttools.com/100-kg-to-lbs/)
+- [110 kg to lbs](https://convertminttools.com/110-kg-to-lbs/)
+- [120 kg to lbs](https://convertminttools.com/120-kg-to-lbs/)
+
+## Scenario guides
+
+- [lbs to kg body weight chart](https://convertminttools.com/lbs-to-kg-body-weight-chart/): 50-250 lb reference table with kilograms and UK stones.
+- [lbs to kg luggage weight guide](https://convertminttools.com/lbs-to-kg-luggage-weight-guide/): Checked and carry-on limits for 10 major airlines.
+- [lbs to kg gym weight plates](https://convertminttools.com/lbs-to-kg-gym-weight-plates/): Olympic bars, US lb plates, IWF kg plates, and common training loads.
+
 ## About
 
 - [About ConvertMintTools](https://convertminttools.com/about/): How we calculate, which sources we follow (NIST, BIPM), and accuracy notes.

@@ -60,6 +60,26 @@
       </p>
     </section>
 
+    <!-- Phase 2 programmatic 内链 -->
+    <section aria-labelledby="popular-kg-to-lbs" class="space-y-4">
+      <h2 id="popular-kg-to-lbs" class="text-2xl font-bold tracking-normal text-gray-950">
+        Popular kg to lbs conversions
+      </h2>
+      <p class="max-w-3xl text-sm text-gray-600">
+        Jump to a specific kilogram value for a worked example, nearby values, and context.
+      </p>
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <NuxtLink
+          v-for="n in kgToLbsValues"
+          :key="n"
+          :to="`/${n}-kg-to-lbs`"
+          class="inline-flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-semibold text-gray-950 hover:border-blue-700 hover:text-blue-700"
+        >
+          {{ n }} kg to lbs
+        </NuxtLink>
+      </div>
+    </section>
+
     <FaqBlock :items="faqs.kgToLbs" />
     <RelatedTools :tools="relatedTools.kgToLbs" />
   </main>
@@ -69,6 +89,7 @@
 import { bodyWeightKgToLbsRows, kgToLbsRows } from '~/data/conversion-tables'
 import { faqs } from '~/data/faqs'
 import { pages } from '~/data/pages'
+import { kgToLbsValues } from '~/data/programmatic-pages'
 import { relatedTools } from '~/data/related-tools'
 
 const page = pages.kgToLbs

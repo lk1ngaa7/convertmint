@@ -52,6 +52,31 @@ export function useWebApplicationJsonLd(pageKey: PageKey): void {
   })
 }
 
+// inline 版本：供 programmatic 数字页和场景页用
+// 不走 PageKey 查表，直接接具体字段
+export interface WebApplicationJsonLdInline {
+  name: string
+  url: string          // 完整带协议的 URL（期望已带尾斜杠）
+  description: string
+}
+
+export function useWebApplicationJsonLdInline(data: WebApplicationJsonLdInline): void {
+  addJsonLd({
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: data.name,
+    url: data.url,
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Any',
+    description: data.description,
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+  })
+}
+
 export interface BreadcrumbItem {
   name: string
   path: string

@@ -1,4 +1,8 @@
-const routes = [
+// Programmatic 数字页 + 场景页清单（单一真相源在 data/programmatic-routes.mjs，
+// sitemap 生成脚本也读同一份）
+import { programmaticRoutes } from './data/programmatic-routes.mjs'
+
+const staticRoutes = [
   '/',
   '/military-time-converter',
   '/convert-kg-to-lbs',
@@ -10,6 +14,8 @@ const routes = [
   '/terms',
   '/sitemap',
 ]
+
+const routes = [...staticRoutes, ...programmaticRoutes]
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',

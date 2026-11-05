@@ -45,6 +45,27 @@
       </div>
     </section>
 
+    <!-- Phase 2 场景页入口 -->
+    <section aria-labelledby="scenario-guides" class="space-y-4">
+      <h2 id="scenario-guides" class="text-2xl font-bold tracking-normal text-gray-950">
+        Scenario guides
+      </h2>
+      <p class="max-w-3xl text-sm text-gray-600">
+        Context-specific weight guides for travel, body weight reference, and gym training.
+      </p>
+      <div class="grid gap-4 sm:grid-cols-3">
+        <NuxtLink
+          v-for="guide in scenarioGuides"
+          :key="guide.href"
+          :to="guide.href"
+          class="group block rounded-lg border border-gray-200 bg-white p-4 hover:border-blue-700"
+        >
+          <p class="text-base font-semibold text-gray-950 group-hover:text-blue-700">{{ guide.title }}</p>
+          <p class="mt-2 text-sm leading-6 text-gray-600">{{ guide.description }}</p>
+        </NuxtLink>
+      </div>
+    </section>
+
     <FaqBlock :items="faqs.weightConverter" />
     <RelatedTools :tools="relatedTools.weightConverter" />
   </main>
@@ -55,6 +76,12 @@ import { weightUnitRows } from '~/data/conversion-tables'
 import { faqs } from '~/data/faqs'
 import { pages } from '~/data/pages'
 import { relatedTools } from '~/data/related-tools'
+
+const scenarioGuides = [
+  { title: 'lbs to kg body weight chart', description: '50-250 lb body weight reference table with kilograms and UK stones.', href: '/lbs-to-kg-body-weight-chart' },
+  { title: 'lbs to kg luggage weight guide', description: 'Checked and carry-on weight limits for 10 major airlines in both units.', href: '/lbs-to-kg-luggage-weight-guide' },
+  { title: 'lbs to kg gym weight plates', description: 'Olympic bars, US lb plates, IWF metric plates, and common training loads.', href: '/lbs-to-kg-gym-weight-plates' },
+]
 
 const page = pages.weightConverter
 const breadcrumbs = [

@@ -60,6 +60,26 @@
       </p>
     </section>
 
+    <!-- Phase 2 programmatic 内链：把具体数字页暴露出来，让 Google crawlLinks 发现 + 传递内链权重 -->
+    <section aria-labelledby="popular-lbs-to-kg" class="space-y-4">
+      <h2 id="popular-lbs-to-kg" class="text-2xl font-bold tracking-normal text-gray-950">
+        Popular lbs to kg conversions
+      </h2>
+      <p class="max-w-3xl text-sm text-gray-600">
+        Jump to a specific pound value for a worked example, nearby values, and context.
+      </p>
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+        <NuxtLink
+          v-for="n in lbsToKgValues"
+          :key="n"
+          :to="`/${n}-lbs-to-kg`"
+          class="inline-flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-semibold text-gray-950 hover:border-blue-700 hover:text-blue-700"
+        >
+          {{ n }} lbs to kg
+        </NuxtLink>
+      </div>
+    </section>
+
     <FaqBlock :items="faqs.lbsToKg" />
     <RelatedTools :tools="relatedTools.lbsToKg" />
   </main>
@@ -69,6 +89,7 @@
 import { lbsToKgRows, travelLbsToKgRows } from '~/data/conversion-tables'
 import { faqs } from '~/data/faqs'
 import { pages } from '~/data/pages'
+import { lbsToKgValues } from '~/data/programmatic-pages'
 import { relatedTools } from '~/data/related-tools'
 
 const page = pages.lbsToKg
