@@ -1,0 +1,26 @@
+# ConvertMintTools
+
+> Free browser-based unit converter tools. All conversions run entirely in the browser with no server call and no account required.
+
+## Tools
+
+- [Convert kg to lbs](https://convertminttools.com/convert-kg-to-lbs): Convert kilograms to pounds with formula, worked example, and reference tables.
+- [Convert lbs to kg](https://convertminttools.com/convert-lbs-to-kg): Convert pounds to kilograms with formula, worked example, and reference tables.
+- [Weight Converter](https://convertminttools.com/weight-converter): Multi-unit weight hub (kg, g, mg, lb, oz, stone, metric ton, US ton).
+- [Military Time Converter](https://convertminttools.com/military-time-converter): Convert HHMM / HH:MM between 24-hour military time and 12-hour AM/PM.
+
+## About
+
+- [About ConvertMintTools](https://convertminttools.com/about): How we calculate, which sources we follow (NIST, BIPM), and accuracy notes.
+- [Contact](https://convertminttools.com/contact): Report an issue, suggest a new converter, or send feedback.
+
+## Formulas
+
+- Weight: 1 kg = 2.2046226218 lb (international avoirdupois pound; NIST 1959 agreement; 1 lb = 0.45359237 kg exactly).
+- Military time: 0000-2359 range; 0000 maps to 12:00 AM, 1200 to 12:00 PM, 1430 to 2:30 PM; 2400 is not a valid input.
+
+## Policies
+
+- [Privacy Policy](https://convertminttools.com/privacy)
+- [Terms of Service](https://convertminttools.com/terms)
+- [Sitemap](https://convertminttools.com/sitemap)

@@ -22,7 +22,7 @@
     <FormulaBlock
       title="lbs to kg formula"
       heading-id="lbs-to-kg-formula"
-      description="To convert pounds to kilograms, divide the pound value by 2.20462."
+      description="To convert pounds to kilograms, divide the pound value by 2.20462. Based on the international avoirdupois pound (NIST 1959 agreement; 1 lb = 0.45359237 kg exactly)."
       formula="kilograms = pounds ÷ 2.20462"
     />
 

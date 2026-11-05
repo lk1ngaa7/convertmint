@@ -3,7 +3,8 @@
     <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         <section v-for="group in footerGroups" :key="group.title" class="space-y-3">
-          <h2 class="text-sm font-semibold text-gray-950">{{ group.title }}</h2>
+          <!-- 用 h3 而不是 h2：避免每页在 footer 多出 4 个 h2 稀释主内容标题权重 -->
+          <h3 class="text-sm font-semibold text-gray-950">{{ group.title }}</h3>
           <ul class="space-y-2 text-sm text-gray-600">
             <li v-for="item in group.items" :key="item.href">
               <NuxtLink class="inline-flex min-h-8 items-center hover:text-blue-700" :to="item.href">
@@ -15,12 +16,16 @@
       </div>
       <p class="mt-8 border-t border-gray-200 pt-5 text-sm text-gray-600">
         © 2026 ConvertMintTools.com. Free browser-based converter tools.
+        <span class="block sm:inline">Last updated: {{ lastUpdated }}.</span>
       </p>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
+// 页脚显示的"最后更新"字样：发版时手动调整，给搜索引擎和访客"新鲜度"信号
+const lastUpdated = 'November 2026'
+
 const footerGroups = [
   {
     title: 'Tools',

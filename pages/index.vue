@@ -17,12 +17,12 @@
       />
     </section>
 
-    <section aria-labelledby="popular-converters" class="space-y-4">
-      <h2 id="popular-converters" class="text-2xl font-bold tracking-normal text-gray-950">
-        Popular converters
-      </h2>
-      <RelatedTools title="Popular tools" heading-id="popular-tools" :tools="relatedTools.home" />
-    </section>
+    <!-- 直接复用 RelatedTools 自带的 H2，避免外层 section 产生"双 H2"冗余 -->
+    <RelatedTools
+      title="Popular converters"
+      heading-id="popular-converters"
+      :tools="relatedTools.home"
+    />
 
     <section aria-labelledby="converter-categories" class="space-y-4">
       <h2 id="converter-categories" class="text-2xl font-bold tracking-normal text-gray-950">
@@ -57,6 +57,27 @@
       </div>
     </section>
 
+    <!-- E-E-A-T：讲清楚数据怎么来、公式依据什么，建立可信度与 AI 引擎引用价值 -->
+    <section aria-labelledby="how-we-keep-conversions-accurate" class="space-y-3">
+      <h2 id="how-we-keep-conversions-accurate" class="text-2xl font-bold tracking-normal text-gray-950">
+        How we keep conversions accurate
+      </h2>
+      <div class="max-w-3xl space-y-3 text-base leading-7 text-gray-700">
+        <p>
+          Weight conversions use the international avoirdupois pound
+          (1&nbsp;lb&nbsp;=&nbsp;0.45359237&nbsp;kg exactly, per the 1959 international agreement
+          referenced by the <a href="https://www.nist.gov/pml/weights-and-measures/si-units-mass" rel="external" class="font-semibold text-blue-700">NIST definition of mass</a>).
+          Time conversions treat military time as a plain 24-hour clock from 0000 to 2359,
+          with no daylight-saving offset — just a direct HHMM mapping to 12-hour AM/PM.
+        </p>
+        <p>
+          Every tool page shows the formula and a worked example so results are
+          easy to verify by hand. Displayed numbers are rounded for readability;
+          for engineering, medical, or legal use, re-check against a primary source.
+        </p>
+      </div>
+    </section>
+
     <FaqBlock :items="faqs.home" />
     <RelatedTools :tools="relatedTools.home" />
   </main>
@@ -64,7 +85,7 @@
 
 <script setup lang="ts">
 import { faqs } from '~/data/faqs'
-import { pages } from '~/data/pages'
+import { pages, siteUrl } from '~/data/pages'
 import { relatedTools } from '~/data/related-tools'
 
 const page = pages.home
@@ -75,6 +96,18 @@ const trustItems = [
   'Mobile-friendly converter pages',
 ]
 
+// 首页顶部结构化数据：WebSite + Organization + WebApplication
 usePageSeo('home')
 useHomeJsonLd()
+// 首页 FAQ 区块对应的 FAQPage 结构化数据（之前漏调，AI 引擎可据此引用首页 FAQ）
+useFaqJsonLd(faqs.home)
+// 首页"Popular converters"列表导出为 ItemList，给 Google sitelinks / carousel 提供数据
+useItemListJsonLd(
+  'Popular converters',
+  relatedTools.home.map((tool) => ({
+    name: tool.title,
+    url: `${siteUrl}${tool.href}`,
+    description: tool.description,
+  })),
+)
 </script>

@@ -82,6 +82,30 @@ export function useCollectionPageJsonLd(pageKey: PageKey): void {
   })
 }
 
+// ItemList 条目：工具或任意可列举的内部资源
+export interface ItemListEntry {
+  name: string
+  url: string
+  description?: string
+}
+
+// 为首页等「列表型」页面生成 ItemList 结构化数据
+// Google 识别为导航集合，有机会出现 sitelinks 或 carousel
+export function useItemListJsonLd(name: string, items: ItemListEntry[]): void {
+  addJsonLd({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name,
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      url: item.url,
+      ...(item.description ? { description: item.description } : {}),
+    })),
+  })
+}
+
 export function useHomeJsonLd(): void {
   addJsonLd([
     {

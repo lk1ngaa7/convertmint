@@ -22,7 +22,7 @@
     <FormulaBlock
       title="kg to lbs formula"
       heading-id="kg-to-lbs-formula"
-      description="To convert kilograms to pounds, multiply the kilogram value by 2.20462."
+      description="To convert kilograms to pounds, multiply the kilogram value by 2.20462. Based on the international avoirdupois pound (NIST 1959 agreement; 1 lb = 0.45359237 kg exactly)."
       formula="pounds = kilograms × 2.20462"
     />
 

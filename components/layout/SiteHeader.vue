@@ -37,7 +37,8 @@
     >
       <div class="mx-auto grid max-w-6xl gap-4">
         <section v-for="group in navGroups" :key="group.title" class="space-y-2">
-          <h2 class="text-xs font-semibold uppercase tracking-normal text-gray-500">{{ group.title }}</h2>
+          <!-- 移动端导航分组标题用 h3：header 不与页面主内容争抢 h2 -->
+          <h3 class="text-xs font-semibold uppercase tracking-normal text-gray-500">{{ group.title }}</h3>
           <div class="grid gap-1">
             <NuxtLink
               v-for="item in group.items"

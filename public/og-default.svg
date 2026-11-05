@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- 背景渐变 -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6ee7b7"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- 装饰性圆环 -->
+  <circle cx="1050" cy="100" r="180" fill="#ffffff" opacity="0.06"/>
+  <circle cx="120" cy="560" r="220" fill="#ffffff" opacity="0.05"/>
+
+  <!-- 薄荷叶 icon 简化版 -->
+  <g transform="translate(140, 180)">
+    <!-- 左叶 -->
+    <path d="M 60 80 C 60 30, 30 10, 0 20 C 10 50, 30 80, 60 80 Z" fill="url(#leaf)"/>
+    <!-- 右叶 -->
+    <path d="M 60 80 C 60 30, 90 10, 120 20 C 110 50, 90 80, 60 80 Z" fill="url(#leaf)"/>
+    <!-- 中间叶脉 -->
+    <line x1="60" y1="20" x2="60" y2="80" stroke="#ffffff" stroke-width="3" opacity="0.5"/>
+  </g>
+
+  <!-- 品牌名 -->
+  <text x="140" y="340"
+        font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif"
+        font-size="96"
+        font-weight="800"
+        fill="#ffffff"
+        letter-spacing="-2">ConvertMintTools</text>
+
+  <!-- 副标题 -->
+  <text x="140" y="410"
+        font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif"
+        font-size="40"
+        font-weight="500"
+        fill="#ffffff"
+        opacity="0.92">Free browser-based unit converters</text>
+
+  <!-- 工具标签 -->
+  <g font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="600" fill="#ffffff">
+    <!-- kg to lbs -->
+    <rect x="140" y="470" width="180" height="60" rx="30" fill="#ffffff" opacity="0.15"/>
+    <text x="230" y="510" text-anchor="middle">kg ↔ lbs</text>
+    <!-- military time -->
+    <rect x="340" y="470" width="240" height="60" rx="30" fill="#ffffff" opacity="0.15"/>
+    <text x="460" y="510" text-anchor="middle">military time</text>
+    <!-- weight -->
+    <rect x="600" y="470" width="200" height="60" rx="30" fill="#ffffff" opacity="0.15"/>
+    <text x="700" y="510" text-anchor="middle">weight units</text>
+  </g>
+
+  <!-- 域名 -->
+  <text x="140" y="590"
+        font-family="Inter, system-ui, sans-serif"
+        font-size="26"
+        font-weight="500"
+        fill="#ffffff"
+        opacity="0.75">convertminttools.com</text>
+</svg>
