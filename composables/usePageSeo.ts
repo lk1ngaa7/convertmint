@@ -1,11 +1,12 @@
-import { pages, siteUrl, type PageKey } from '~/data/pages'
+import { canonicalUrl, pages, siteUrl, type PageKey } from '~/data/pages'
 
 // 全站默认 OG 图（1200x630 PNG）
 const defaultOgImage = `${siteUrl}/og-default.png`
 
 export function usePageSeo(pageKey: PageKey): void {
   const page = pages[pageKey]
-  const canonical = `${siteUrl}${page.path}`
+  // 使用带尾斜杠的 canonical，匹配 Cloudflare Pages 的实际 URL
+  const canonical = canonicalUrl(page.path)
 
   useHead({
     title: page.title,

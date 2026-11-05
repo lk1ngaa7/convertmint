@@ -1,5 +1,5 @@
 import type { FaqItem } from '~/components/seo/FaqBlock.vue'
-import { pages, siteUrl, type PageKey } from '~/data/pages'
+import { canonicalUrl, pages, siteUrl, type PageKey } from '~/data/pages'
 
 interface JsonLdNode {
   '@context': 'https://schema.org'
@@ -40,7 +40,7 @@ export function useWebApplicationJsonLd(pageKey: PageKey): void {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: page.h1,
-    url: `${siteUrl}${page.path}`,
+    url: canonicalUrl(page.path),
     applicationCategory: 'UtilitiesApplication',
     operatingSystem: 'Any',
     description: page.description,
@@ -65,7 +65,7 @@ export function useBreadcrumbJsonLd(items: BreadcrumbItem[]): void {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `${siteUrl}${item.path}`,
+      item: canonicalUrl(item.path),
     })),
   })
 }
@@ -77,7 +77,7 @@ export function useCollectionPageJsonLd(pageKey: PageKey): void {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: page.h1,
-    url: `${siteUrl}${page.path}`,
+    url: canonicalUrl(page.path),
     description: page.description,
   })
 }
@@ -107,25 +107,28 @@ export function useItemListJsonLd(name: string, items: ItemListEntry[]): void {
 }
 
 export function useHomeJsonLd(): void {
+  // 首页外部 URL 统一带尾斜杠
+  const home = canonicalUrl('/')
+
   addJsonLd([
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: 'Convert Mint',
-      url: siteUrl,
+      url: home,
       description: pages.home.description,
     },
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'ConvertMintTools',
-      url: siteUrl,
+      url: home,
     },
     {
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
       name: 'Convert Mint',
-      url: siteUrl,
+      url: home,
       applicationCategory: 'UtilitiesApplication',
       operatingSystem: 'Any',
       description: pages.home.description,

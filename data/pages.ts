@@ -24,6 +24,16 @@ export interface PageMeta {
 
 export const siteUrl = 'https://convertminttools.com'
 
+// 把内部路由 path 转成"对外可访问的 canonical URL"。
+// Cloudflare Pages 对 SSG 的目录产物会把 /foo 308 到 /foo/，
+// 所以 sitemap、canonical、JSON-LD 的 url 字段都必须带尾斜杠，
+// 避免与 CF 的实际 URL 冲突导致 GSC 收录不进去。
+// 首页 path 本身是 '/'，不需要再拼斜杠。
+export function canonicalUrl(path: string): string {
+  if (path === '/') return `${siteUrl}/`
+  return `${siteUrl}${path}/`
+}
+
 export const pages: Record<PageKey, PageMeta> = {
   home: {
     path: '/',

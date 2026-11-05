@@ -85,7 +85,7 @@
 
 <script setup lang="ts">
 import { faqs } from '~/data/faqs'
-import { pages, siteUrl } from '~/data/pages'
+import { canonicalUrl, pages } from '~/data/pages'
 import { relatedTools } from '~/data/related-tools'
 
 const page = pages.home
@@ -102,11 +102,12 @@ useHomeJsonLd()
 // 首页 FAQ 区块对应的 FAQPage 结构化数据（之前漏调，AI 引擎可据此引用首页 FAQ）
 useFaqJsonLd(faqs.home)
 // 首页"Popular converters"列表导出为 ItemList，给 Google sitelinks / carousel 提供数据
+// url 字段用 canonicalUrl 保证带尾斜杠，和 CF Pages 的实际 URL 一致
 useItemListJsonLd(
   'Popular converters',
   relatedTools.home.map((tool) => ({
     name: tool.title,
-    url: `${siteUrl}${tool.href}`,
+    url: canonicalUrl(tool.href),
     description: tool.description,
   })),
 )
